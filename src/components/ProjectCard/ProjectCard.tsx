@@ -8,7 +8,7 @@ export const ProjectCard: React.FC<Project> = ({
 	url,
 }) => {
 	return (
-		<Card>
+		<Card data-id="project-card">
 			<div className="flex flex-col gap-0.5">
 				<div>
 					<h3 className="text-lg font-medium underline">ID</h3>
