@@ -6,20 +6,8 @@ import type { Project } from "@/types";
 const getProjects = async (): Promise<Project[]> => {
 	const { data } = await sylveraApiClient.get("/projects");
 
-	// const projects = data.result.data;
-
-	console.log(data)
-
 	return data;
 };
-
-// interface ProjectsCardsProps {
-// 	projects: Project[];
-// }
-
-// const ProjectsCards: React.FC<ProjectsCardsProps> = ({ projects }) => {
-// 	return <div></div>;
-// };
 
 const projectsPage = async () => {
 	const projects = await getProjects();

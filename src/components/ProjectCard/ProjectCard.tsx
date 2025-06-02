@@ -24,7 +24,9 @@ export const ProjectCard: React.FC<Project> = ({
 				</div>
 				<div>
 					<h3 className="text-lg font-medium underline">URL</h3>
-					<a className="text-green-900" href={url}>Go to site</a>
+					<a className="text-green-900" href={url}>
+						Go to site
+					</a>
 				</div>
 			</div>
 		</Card>
