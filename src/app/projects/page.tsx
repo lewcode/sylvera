@@ -1,13 +1,6 @@
-import { sylveraApiClient } from "@/clients/sylvera-api/client";
+import { getProjects } from "@/clients/sylvera-api/client";
 import PageContainer from "@/components/Page/PageContainer";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
-import type { Project } from "@/types";
-
-const getProjects = async (): Promise<Project[]> => {
-	const { data } = await sylveraApiClient.get("/projects");
-
-	return data;
-};
 
 const projectsPage = async () => {
 	const projects = await getProjects();

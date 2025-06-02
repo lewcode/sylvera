@@ -1,6 +1,7 @@
+import type { Project } from "@/types";
 import axios from "axios";
 
-export const sylveraApiClient = axios.create({
+const sylveraApiClient = axios.create({
 	baseURL: "http://localhost:4000/",
 	timeout: 5000,
 	headers: {
@@ -8,3 +9,9 @@ export const sylveraApiClient = axios.create({
 		Accept: "application/json",
 	},
 });
+
+export const getProjects = async (): Promise<Project[]> => {
+	const { data } = await sylveraApiClient.get("/projects");
+
+	return data;
+};
